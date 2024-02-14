@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title>Presentasjon Lyse Utvikling</title>
+    <link rel="shortcut icon" href="./favicon.ico" />
+    <link rel="stylesheet" href="./dist/reset.css" />
+    <link rel="stylesheet" href="./dist/reveal.css" />
+    <link rel="stylesheet" href="./dist/theme/night.css" id="theme" />
+    <link rel="stylesheet" href="./css/highlight/base16/zenburn.css" />
+
+
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section data-markdown data-separator="<!--s-->" data-separator-vertical="<!--v-->">
+          <textarea data-template>
+            
+
+# Utvikling i Lyse
+
+<!--v-->
+
+#### Arbeidsplassen
+![kontoret](lokalet.jpg)
+
+<!--v-->
+
+#### En typisk arbeidsdag
+
+|             |         |
+|-------------|---------|
+| 09.00-09.15 | StandUp |
+| 09.15-10.00 | Plukke oppgave Jira board og forstår problemet |
+| 10.00-11.00 | undersøke løsninger på lignende problemer | 
+| 11.00-11.30 | lunsj |
+
+<!--v-->
+
+|             |        |
+|-------------|--------|
+| 11.30-12.00 | diskusjon med teamet og arkitekt <br>om forskjellige løsningsalternativer |
+| 12.00-14.00 | lage utkast til løsning og diskusjon med kolleger |
+| 14.00-15.00 | Utviklersamling med faglig påfyll | 
+| 15.00-17.00 | forbedre løsningsforslag etter innspill fra kolleger | 
+
+<!--v-->
+
+#### Hvem jobber jeg sammen med?
+
+- andre utviklere
+- grafiske designere
+- UX eksperter
+- arkitekter
+- kunder
+- personalleder
+- SCRUM-master
+- Forretningseier
+- servicedesk
+
+<!--v-->
+
+#### Teknologier
+
+- Java / Spring Boot ☕
+- Javascript / Node.js
+- React.js / Next.js
+- CSS / HTML
+- Kubernetes
+- REST, Open API Spec, Json Schema
+- Git
+
+<!--v-->
+
+
+#### Uttrekk fra intern opplæringsplan
+![Emner](plan-wordcloud.png)
+
+<!--v-->
+#### Hva etterpå?
+
+Lyse trenger flere utviklere 🤓
+
+
+          </textarea>
+        </section>
+      </div>
+    </div>
+
+    <script src="./dist/reveal.js"></script>
+
+    <script src="./plugin/markdown/markdown.js"></script>
+    <script src="./plugin/highlight/highlight.js"></script>
+    <script src="./plugin/zoom/zoom.js"></script>
+    <script src="./plugin/notes/notes.js"></script>
+    <script src="./plugin/math/math.js"></script>
+    <script>
+      function extend() {
+        var target = {};
+        for (var i = 0; i < arguments.length; i++) {
+          var source = arguments[i];
+          for (var key in source) {
+            if (source.hasOwnProperty(key)) {
+              target[key] = source[key];
+            }
+          }
+        }
+        return target;
+      }
+
+      // default options to init reveal.js
+      var defaultOptions = {
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'default', // none/fade/slide/convex/concave/zoom
+        slideNumber: true,
+        plugins: [
+          RevealMarkdown,
+          RevealHighlight,
+          RevealZoom,
+          RevealNotes,
+          RevealMath
+        ]
+      };
+
+      // options from URL query string
+      var queryOptions = Reveal().getQueryHash() || {};
+
+      var options = extend(defaultOptions, {"_":["slides.md"],"disable-auto-open":true,"disableAutoOpen":true,"static":true}, queryOptions);
+    </script>
+
+
+    <script>
+      Reveal.initialize(options);
+    </script>
+  </body>
+</html>
